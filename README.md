@@ -54,6 +54,14 @@ Before you can run this project, ensure you have the following installed and con
 5. **Start Elasticsearch**
    Ensure Elasticsearch is running on your machine or accessible via the provided `ELASTICSEARCH_HOST`.
 
+```bash
+➜  Desktop docker run -p 9200:9200 \
+-e "discovery.type=single-node" \
+-e "ELASTIC_PASSWORD=mysecurepassword" \
+-e "xpack.security.http.ssl.enabled=false" \
+-e "ES_JAVA_OPTS=-Xms2g -Xmx2g" \
+docker.elastic.co/elasticsearch/elasticsearch:8.5.0
+```
 ---
 
 ## Usage
